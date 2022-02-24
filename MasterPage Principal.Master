@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage Principal.Master.cs" Inherits="Agenda_do_amor.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header> <h1> Agenda Web </h1> </header>
+        <nav>
+            <p> menu</p> 
+            <asp:Menu ID="Menu1" runat="server" BackColor="#FFFBD6" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="Larger" ForeColor="#990000" OnMenuItemClick="Menu1_MenuItemClick" Orientation="Horizontal" StaticSubMenuIndent="10px">
+                <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <DynamicMenuStyle BackColor="#FFFBD6" />
+                <DynamicSelectedStyle BackColor="#FFCC66" />
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/index.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                    <asp:MenuItem Text="Usuario" Value="Usuario" NavigateUrl="~/Usuarios.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Contato" Value="Contato" NavigateUrl="~/Contatos.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Sair" Value="Sair"></asp:MenuItem>
+                </Items>
+                <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <StaticSelectedStyle BackColor="#FFCC66" />
+            </asp:Menu>
+        </nav>
+        <main> 
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+               
+            </asp:ContentPlaceHolder>
+        </div>
+            </main>
+        <footer>
+            <p2> Site desenvolvido por
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="https://www.linkedin.com/in/gabriel-amorim-08246117a/" Target="_blank">Gabriel Amorim</asp:HyperLink>
+            </p2>
+        </footer>
+    </form>
+</body>
+</html>
